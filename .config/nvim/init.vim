@@ -16,7 +16,8 @@ Plug 'tmhedberg/SimpylFold'
 Plug 'dracula/vim', { 'as': 'dracula' }
 
 call plug#end()
-
+set termguicolors
+colorscheme dracula
 set mouse=a
 
 "JEDI
@@ -33,6 +34,10 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 "AIRLINE
 let g:airline_theme='dracula' " <theme> is a valid theme name
+"""Enable tab line
+let g:airline#extensions#tabline#enabled = 1
+"""Enable powerfonts giving angled tables
+let g:airline_powerline_fonts = 1
 
 "NEOFORMAT
 """Enable alignment
@@ -57,6 +62,7 @@ augroup END
 
 "PYLINT
 let g:neomake_python_enabled_makers = ['pylint']
+let g:neomake_python_pylint_args = ['--output-format=colorized']
 
 "NEOMAKE
 call neomake#configure#automake('nrwi', 500)
