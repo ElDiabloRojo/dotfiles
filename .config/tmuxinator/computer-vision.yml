@@ -47,4 +47,9 @@ windows:
       # synchronize: after
       panes:
         - vi
-        - source computer-vision_venv/bin/activate.fish 
+        - source computer-vision_venv/bin/activate.fish
+  - notebook:
+      layout: main-vertical
+      root: ~/Git/computer-vision/master-course
+      panes:
+              - source ../computer-vision_venv/bin/activate.fish && jupyter notebook
