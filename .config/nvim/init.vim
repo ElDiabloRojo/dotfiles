@@ -17,6 +17,8 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 
 call plug#end()
 
+set mouse=a
+
 "JEDI
 """disable autocompletion, cause we use deoplete for completion
 let g:jedi#completions_enabled = 0
