@@ -14,11 +14,14 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'machakann/vim-highlightedyank'
 Plug 'tmhedberg/SimpylFold'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 
 call plug#end()
+
 set termguicolors
 colorscheme dracula
 set mouse=a
+set number
 
 "JEDI
 """disable autocompletion, cause we use deoplete for completion
