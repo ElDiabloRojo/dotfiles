@@ -11,7 +11,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'machakann/vim-highlightedyank'
 Plug 'tmhedberg/SimpylFold'
 Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 call plug#end()
 
@@ -46,8 +46,10 @@ let g:neoformat_basic_format_trim = 1
 
 "NERDTREE
 nnoremap <silent> <C-k><C-B> :NERDTreeToggle<CR>
+nnoremap <silent> <Leader>v :NERDTreeFind<CR>
 let g:NERDTreeWinSize = 20
 let NERDTreeShowHidden=1
+let NERDTreeMinimalUI=1
 augroup nerdtree_open
     autocmd!
     autocmd VimEnter * NERDTree | wincmd p
